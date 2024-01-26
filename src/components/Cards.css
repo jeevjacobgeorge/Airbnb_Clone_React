@@ -1,9 +1,11 @@
 .cards-section{
     display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: 6px auto;
     background-color:transparent;
     max-width:1000px;
-    padding:3px;
+    padding:19px;
 
 }
 
@@ -12,22 +14,35 @@
     font-size: 12px;
     display: flex;
     flex-direction: column;
-    gap:7px;
+    justify-content: space-between;
+    gap:8px;
     width: 199px;
-    he
-    margin:3px;
-    padding:3px;
-}
-
-.card >img{
-    width: 100%;
+    height: auto;
+    margin:4px;
+    padding-block:0px;
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
     border-radius: 9px;
 }
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+.card-img{
+    height: 75%;
+}
+.card-img > img{
+    height: 95%;
+    width: 100%;
+    border-radius: 9px;  
+}
+
 
 .card-details{
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding-left:4px;
+
 }
 .card-details-top{
     display: flex;
@@ -39,12 +54,7 @@
 #star{
     height: 1.1em;
 }
-.card-details-bottom{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
+
 .card-details-bottom > p{
     margin:4px;
 }
@@ -58,6 +68,9 @@
 }
 
 @media (max-width:768px){
+    .cards-section{
+        padding:3px;
+    }
     .card{
         gap:3px;
         width: calc(100% / 4);

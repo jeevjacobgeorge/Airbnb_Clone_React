@@ -1,6 +1,7 @@
 body{
   margin:0;
   background-color: #FFFFFF;
+  user-select: none;
 }
 
 header{
@@ -14,17 +15,19 @@ header > img{
   margin:19px;
   max-width: 110px;
   
+  
 }
 .hero{
   max-width:1000px;
-  margin:6px auto 0 auto;
+  margin:6px auto;
   align-items: center;
   display: flex;
   flex-direction: column;
-
+  user-select: none;
 }
-.hero > img{
+.hero  img{
   max-width: 80%;
+
 }
 .hero-text{
   margin-block: 6px;
@@ -49,6 +52,9 @@ header > img{
 }
 
 @media (max-width: 768px) {
+  .hero{
+    max-width: 100%;
+  }
   .hero-text > h2{
     font-size: 23px;
     letter-spacing: .15rem;
