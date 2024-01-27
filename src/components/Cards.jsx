@@ -2,8 +2,7 @@ import React ,{ useState } from 'react'
 import './Cards.css'
 import star from '../assets/star.png'
 import ellipse from '../assets/ellipse.png'
-const images_path = "/Airbnb_Clone_React/src/assets/"
-
+const images_path = "./assets/"
 
 const Cards = () =>{
     return(
@@ -67,10 +66,11 @@ const Cards = () =>{
     }
 const Card = (props) => {
     const [isHovered, setHover] = useState(false)
+    
   return (
         <div className='card' onMouseEnter={() => setHover(true) } onMouseLeave={() => setHover(false)}>
             <div className='card-img'>
-                <img src={isHovered ? images_path + props.hover_filename : images_path + props.img_filename} alt="image_1" />
+                <img src="../assets/image_1.png" alt="image_1" />
             </div>
             <div className='card-details'>
                 <div className='card-details-top'>
