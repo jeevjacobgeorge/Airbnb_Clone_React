@@ -16,6 +16,15 @@ const Cards = () =>{
                 rating_count = {9}
                 country = "SA"
             />
+                <Card
+                    img_filename="img_5.webp"
+                    hover_filename="img_egypt.webp"
+                    heading="Plan A Trip To Egypt With a Local Insider"
+                    price_dollars = {200}
+                    rating = {5.0}
+                    rating_count = {2}
+                    country = "USA"
+                />
             <Card
                 img_filename="img_grandma.jpg"
                 hover_filename="img_food_hover.webp"
@@ -24,15 +33,6 @@ const Cards = () =>{
                 rating = {5.0}
                 rating_count = {30}
                 country = "Italy"
-            />
-            <Card
-                img_filename="img_5.webp"
-                hover_filename="img_egypt.webp"
-                heading="Plan A Trip To Egypt With a Local Insider"
-                price_dollars = {200}
-                rating = {5.0}
-                rating_count = {2}
-                country = "USA"
             />
             <Card
                 img_filename="image_4.jpeg"
@@ -44,6 +44,15 @@ const Cards = () =>{
                 country = "USA"
             />
             <Card
+                img_filename="img_6.jpg"
+                hover_filename="img_5_hover.jpeg"
+                heading="Treat yourself the Olympic chef way"
+                price_dollars = {150}
+                rating = {5.0}
+                rating_count = {15}
+                country = "USA"
+            />
+            <Card
                 img_filename="img_4.webp"
                 hover_filename="img_4_hover.webp"
                 heading="Tea tasting with a Tea Sommelier"
@@ -51,15 +60,6 @@ const Cards = () =>{
                 rating = {5.0}
                 rating_count = {8}
                 country = "CA"
-            />
-            <Card
-                img_filename="img_6.jpg"
-                hover_filename="img_5_hover.jpeg"
-                heading="reat yourself the Olympic chef way"
-                price_dollars = {150}
-                rating = {5.0}
-                rating_count = {15}
-                country = "USA"
             />
         </div>
     )
@@ -70,7 +70,7 @@ const Card = (props) => {
   return (
         <div className='card' onMouseEnter={() => setHover(true) } onMouseLeave={() => setHover(false)}>
             <div className='card-img'>
-                <img src="../assets/image_1.png" alt="image_1" />
+                <img src={isHovered ? images_path + props.hover_filename : images_path + props.img_filename} alt="image_1" />
             </div>
             <div className='card-details'>
                 <div className='card-details-top'>
