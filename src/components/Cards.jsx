@@ -53,7 +53,7 @@ const Cards = () =>{
                 country = "USA"
             />
             <Card
-                img_filename="img_4.webp"
+                img_filename="img_tea.jpeg"
                 hover_filename="img_4_hover.webp"
                 heading="Tea tasting with a Tea Sommelier"
                 price_dollars = {75}
