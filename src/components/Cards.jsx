@@ -2,7 +2,7 @@ import React ,{ useState } from 'react'
 import './Cards.css'
 import star from '../assets/star.png'
 import ellipse from '../assets/ellipse.png'
-const images_path = "./src/assets/"
+const images_path = "/Airbnb_Clone_React/src/assets/"
 
 
 const Cards = () =>{
